@@ -1,4 +1,4 @@
-# [![npm-verison](https://img.shields.io/npm/v/alfred-femine.svg?style=flat-square)](https://www.npmjs.com/package/alfred-femine)
+# [![npm-verison](https://img.shields.io/npm/v/alfy-testx.svg?style=flat-square)](https://www.npmjs.com/package/alfy-testx)
 
 > Test your [Alfy](https://github.com/sindresorhus/alfy) workflows,Few changes have been made to [alfy-test](https://github.com/SamVerschueren/alfy-test) to support entry file or keyword, so that we can test multiple workflow inside one package.
 
