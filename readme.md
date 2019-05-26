@@ -1,35 +1,33 @@
-# alfy-test [![Build Status](https://travis-ci.org/SamVerschueren/alfy-test.svg?branch=master)](https://travis-ci.org/SamVerschueren/alfy-test)
+# [![npm-verison](https://img.shields.io/npm/v/alfred-femine.svg?style=flat-square)](https://www.npmjs.com/package/alfred-femine)
 
-> Test your [Alfy](https://github.com/sindresorhus/alfy) workflows
-
+> Test your [Alfy](https://github.com/sindresorhus/alfy) workflows,Few changes have been made to [alfy-test](https://github.com/SamVerschueren/alfy-test) to support entry file or keyword, so that we can test multiple workflow inside one package.
 
 ## Install
 
 ```
-$ npm install --save alfy-test
+$ npm install --save-dev alfy-testx
 ```
-
 
 ## Usage
 
 ```js
-import test from 'ava';
-import alfyTest from 'alfy-test';
+import test from 'ava'
+import alfyTest from 'alfy-testx'
 
+// const keyword = 'keyword'
+const entry = 'path/main.js'
 test(async t => {
-	const alfy = alfyTest();
+  const alfy = alfyTest({ entry, keyword })
+  const result = await alfy('workflow input')
 
-	const result = await alfy('workflow input');
-
-	t.deepEqual(result, [
-		{
-			title: 'foo',
-			subtitle: 'bar'
-		}
-	]);
-});
+  t.deepEqual(result, [
+    {
+      title: 'foo',
+      subtitle: 'bar'
+    }
+  ])
+})
 ```
-
 
 ## API
 
@@ -39,10 +37,22 @@ Returns an [alfy](#alfyinput) instance.
 
 ### options
 
+### entry
+
+Type: `string`<br>
+
+The entry file of workflow
+
+### keyword
+
+Type: `string`<br>
+
+The keyword of workflow
+
 #### version
 
 Type: `string`<br>
-Default: `3.0.3`
+Default: `3.8.1`
 
 Alfred version.
 
@@ -92,12 +102,10 @@ The [alfy config](https://github.com/sindresorhus/alfy#config) instance.
 
 The [alfy cache](https://github.com/sindresorhus/alfy#cache) instance.
 
-
 ## Examples
 
-- [alfred-ng2](https://github.com/SamVerschueren/alfred-ng2) - Search for Angular 2 API references
-
+* [alfred-femine](https://github.com/FeMiner/alfred-femine) - A collection of front end tools
 
 ## License
 
-MIT © [Sam Verschueren](https://github.com/SamVerschueren)
+MIT © [zxing](https://www.zxing.top)
