@@ -1,9 +1,9 @@
 {
   "name": "alfy-testx",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Test your Alfy workflows",
   "license": "MIT",
-  "repository": "FeMiner/alfred-testx",
+  "repository": "FeMiner/alfy-testx",
   "author": {
     "name": "FeMiner",
     "email": "muyuxingguang@qq.com",
